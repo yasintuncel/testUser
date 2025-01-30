@@ -4,9 +4,15 @@ const app = express();
 const port = 9000;
 
 const users = [
-    { username: 'yasin', password: '123456', name: 'Yasin TUNCEL' },
-    { username: 'test', password: '123456', name: 'Normal User' },
+    { username: 'yasin', password: '123456', name: 'Semiye H.' },
+
+    ...Array.from({ length: 50 }, (_, i) => ({
+        username: `test${i + 1}`,
+        password: '123456',
+        name: `Normal ${i + 1} User`
+    })),
 ];
+
 app.use(express.json());
 // POST route to handle login
 app.post('/auth', (req, res) => {
@@ -23,5 +29,5 @@ app.post('/auth', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+    console.log(`Server running on port ${port}`);
 });
