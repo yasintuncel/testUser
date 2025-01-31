@@ -4,7 +4,7 @@ const app = express();
 const port = 9000;
 
 const users = [
-    { username: 'yasin', password: '123456', name: 'Semiye H.' },
+    { username: 'yasin', password: '123456', name: 'Yasin TUNCEL' },
 
     ...Array.from({ length: 50 }, (_, i) => ({
         username: `test${i + 1}`,
