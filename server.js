@@ -5,6 +5,7 @@ const port = 9000;
 
 const users = [
     { username: 'yasin', password: '123456', name: 'Yasin TUNCEL' },
+    { username: 'yonetici', password: '123456', name: 'Yonetici Kullanici' },
 
     ...Array.from({ length: 50 }, (_, i) => ({
         username: `test${i + 1}`,
